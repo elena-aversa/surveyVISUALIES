@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start the survey! ✨ </title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Please click the button to start the survey</h1>
+        <p>By clicking this button, you will be redirected to a Google Form randomly selected from a list of 10 surveys, each showcasing different examples of visualizations.</p>
+    
+        <button onclick="redirectToSurvey()">✨START SURVEY✨</button>
+    </div>
+
+    <script>
+        function redirectToSurvey() {
+            // List of 10 survey URLs
+            var surveyUrls = [
+                'https://example.com/survey1',
+                'https://example.com/survey2',
+                'https://example.com/survey3',
+                'https://example.com/survey4',
+                'https://example.com/survey5',
+                'https://example.com/survey6',
+                'https://example.com/survey7',
+                'https://example.com/survey8',
+                'https://example.com/survey9',
+                'https://example.com/survey10'
+            ];
+
+            // Randomly select a survey URL
+            var randomIndex = Math.floor(Math.random() * surveyUrls.length);
+            var selectedUrl = surveyUrls[randomIndex];
+
+            // Redirect to the selected survey
+            window.location.href = selectedUrl;
+        }
+    </script>
+</body>
+</html>
